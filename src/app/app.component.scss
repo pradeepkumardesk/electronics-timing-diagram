@@ -1,0 +1,66 @@
+$border-color: #555;
+
+.container {
+    padding: 1rem;
+}
+
+.menu {
+    margin-bottom: 1rem;
+    button {
+        padding: 0.5rem 1rem;
+        margin-right: 0.5rem;
+        font-size: 1rem;
+    }
+}
+
+.row {
+    display: flex;
+    height: 4rem;
+    flex-wrap: nowrap;
+    margin-bottom: 1rem;
+
+    input {
+        min-width: 0;
+        flex: 0 0 20rem;
+        font-size: 1rem;
+        border-radius: 0.25rem;
+        border: 1px solid #555;
+        padding: 0 0.5rem;
+    }
+
+    .space {
+        flex: 0 0 5rem;
+    }
+
+    .block {
+        flex: 0 0 4rem;
+        background-color: #f7f7f7;
+
+        &:hover {
+            background-color: #ddd;
+        }
+    }
+
+    .low + .high,
+    .high + .low {
+        border-left: 1px solid $border-color;
+    }
+
+    .space + .high {
+        border-left: 1px solid $border-color;
+    }
+
+    .high + .space {
+        border-left: 1px solid $border-color;
+    }
+
+    .high {
+        border-top: 1px solid $border-color;
+        border-bottom: 1px solid transparent;
+    }
+
+    .low {
+        border-top: 1px solid transparent;
+        border-bottom: 1px solid $border-color;
+    }
+}

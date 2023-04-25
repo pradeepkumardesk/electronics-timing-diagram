@@ -1,0 +1,18 @@
+
+<div class="container">
+    <div class="menu">
+        <button (click)="appendRow()">Add Row</button>
+        <button (click)="prependColumn()" >Insert column in the beginning</button>
+        <button (click)="appendColumns(10)">Add 10 columns at end</button>
+        <button (click)="deleteLastColumn()">Delete Last Column</button>
+        <!-- <button (click)="saveDiagram()">Save Diagram</button> -->
+        <!-- <button (click)="openDiagram()">Open Diagram</button> -->
+    </div>
+    <div class="row" *ngFor="let row of rows">
+        <input type="text" />
+        <div class="space"></div>
+        <div class="block" *ngFor="let block of row.blocks" [ngClass]="block.isHigh ? 'high' : 'low'"
+            (click)="block.isHigh = !block.isHigh"></div>
+        <div class="space"></div>
+    </div>
+</div>
